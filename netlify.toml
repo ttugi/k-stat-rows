@@ -3,8 +3,3 @@
   to = "https://stat.kita.net/stat/:splat"
   status = 200
   force = true
-
-[[redirects]]
-  from = "/"
-  to = "/index.html"
-  status = 200
