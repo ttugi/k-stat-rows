@@ -38,7 +38,6 @@ function RequestPage() {
                 withCredentials: true
             }
         ).then((data) => {
-            // console.log(data.data)
             const parser = new XMLParser();
             const jsonData: statPage = parser.parse(data.data);
             if (!jsonData || !jsonData.SHEET["ETC-DATA"]?.ETC) {

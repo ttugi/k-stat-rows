@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/stat/*"
+  to = "https://stat.kita.net/stat/:splat"
+  status = 200
+  force = true
