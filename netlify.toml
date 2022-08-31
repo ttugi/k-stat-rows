@@ -1,5 +1,5 @@
 [[redirects]]
-  from = "/stat/kts/ctr/CtrItemImpExpListWorker.screen"
-  to = "https://stat.kita.net"
+  from = "/*"
+  to = "https://stat.kita.net/:splat"
   status = 200
   force = true # COMMENT: ensure that we always redirect
