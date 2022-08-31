@@ -2,7 +2,6 @@
   "name": "k-stat",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://stat.kita.net",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
@@ -15,6 +14,7 @@
     "axios": "^0.27.2",
     "fast-xml-parser": "^4.0.9",
     "file-saver": "^2.0.5",
+    "http-proxy-middleware": "^2.0.6",
     "https": "^1.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
