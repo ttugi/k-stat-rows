@@ -1,20 +1,18 @@
 import axios from "axios"
-import { XMLParser, XMLValidator } from "fast-xml-parser"
+import { XMLParser } from "fast-xml-parser"
 import FileSaver from "file-saver"
 import qs from "qs"
 import { useCallback, useEffect, useState } from "react"
-import { DATAType, statPage, TD } from "./kstatTypes"
+import { statPage } from "./kstatTypes"
 import { fixData } from "./staticData"
 import { generateCsvRow } from "./utils"
 
 function RequestPage() {
     const querySize = 100
-    const [year, setyear] = useState<number>(2022)
+    const [year, setYear] = useState<string>('2022')
     const [month, setMonth] = useState<string>('07')
-    const [data, setData] = useState<string>('')
     const [firstPage, setFirstPage] = useState<statPage>()
     const [total, setTotal] = useState<number>(0)
-    const [jsonPage, setJsonPage] = useState<TD[]>([])
     const [loading, setLoading] = useState<boolean>(false)
     const [currentPage, setCurrentPage] = useState<number>(0)
     const [csvRows, setCsvRows] = useState<string[]>([])
@@ -83,13 +81,13 @@ function RequestPage() {
             setCsvRows(prev => [...prev, ...generateCsvRow(jsonData)])
         }
 
-        async function asdf(){
+        async function asdf() {
             for (let i = 2; i * querySize < 301; i++) {
                 setCurrentPage(i)
                 await fetchPage(i)
                 console.log('next page', i)
             }
-    
+
             setLoading(false)
         }
         asdf().catch(r => {
@@ -105,13 +103,13 @@ function RequestPage() {
         }
         const blob = new Blob(csvRows, { type: 'text/plain;charset=utf-8' })
         setCsvRows([])
-        FileSaver.saveAs(blob, `${year - 1}-${year}-stat.csv`)
+        FileSaver.saveAs(blob, `${Number(year) - 1}-${year}-stats.csv`)
     }, [csvRows, loading, year])
 
     return (
         <div>
-            <input />
-            <input />
+            <input placeholder="4자리 year" value={year} onChange={v => setYear(v.target.value)}/>
+            <input placeholder="2자리 month" value={month} onChange={v => setMonth(v.target.value)}/>
             <button onClick={handleFirstRequest}>
                 request!
             </button>

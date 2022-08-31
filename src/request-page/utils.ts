@@ -1,4 +1,4 @@
-import { statPage, TD } from "./kstatTypes";
+import { statPage } from "./kstatTypes";
 
 export function generateCsvRow(data: statPage): string[] {
     const row = data.SHEET.DATA.TR.map(r => {
