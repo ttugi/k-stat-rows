@@ -1,9 +1,5 @@
 [[redirects]]
-    from = "/stat/*"
-    to = "https://stat.kita.net/:splat"
-    status = 200
-
-[[redirects]]
-    from = "/"
-    to = "/index.html"
-    status = 200
+  from = "/stat"
+  to = "https://stat.kita.net"
+  status = 200
+  force = true # COMMENT: ensure that we always redirect
