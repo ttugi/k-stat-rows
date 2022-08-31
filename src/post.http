@@ -1,0 +1,44 @@
+# POST https://203.233.202.10/stat/kts/ctr/CtrItemImpExpListWorker.screen
+POST https://stat.kita.net/stat/kts/ctr/CtrItemImpExpListWorker.screen
+Content-Type: application/x-www-form-urlencoded
+
+event_udap=Searchn
+&searchType=SHEET
+&sheet_col_length=15
+&pageNum=4
+&viewType=SHEET
+&chartType=bar
+&chartDelay=
+&p_field=%EA%B8%88%EC%95%A1
+&p_measure=1000
+&p_cond_unit=10
+&p_item_code=
+&p_item_name=
+&p_cond_gb=HS
+&p_ctr_code=CN
+&p_ctr_name=%EC%A4%91%EA%B5%AD
+&p_member_id2=
+&p_member_name2=
+&p_page_gb=2
+&p_ctr_code_chk_yn=Y
+&p_item_value_chk_yn=Y
+&s_url=%2Fstat%2Fkts%2Fctr%2FCtrItemImpExpList
+&s_ctr_code=CN
+&country_gb=KTS
+&s_ctr_name=%EC%A4%91%EA%B5%AD
+&stat_yn=Y
+&s_cond_gb=HS
+&s_cond_unit=10
+&s_cond_unit_num=
+&s_trade_gb=s_suji
+&s_year=2021
+&s_month=12
+&s_field=AMT
+&s_monthsum_gb=2
+&s_measure=1000
+&s_sort=THIS_EXP_AMT
+&s_sort_val=DESC
+&s_language=kor_name
+&listCount=100
+&editpage0=
+&pie_legend=Exp
