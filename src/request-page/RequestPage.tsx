@@ -23,6 +23,7 @@ function RequestPage() {
         }
         setLoading(true)
         setCurrentPage(1)
+
         axios.post(
             '/stat/kts/ctr/CtrItemImpExpListWorker.screen',
             qs.stringify({
@@ -81,7 +82,7 @@ function RequestPage() {
         }
 
         async function asdf() {
-            for (let i = 2; i * querySize < 301; i++) {
+            for (let i = 2; i * querySize < total; i++) {
                 setCurrentPage(i)
                 await fetchPage(i)
                 console.log('next page', i)
